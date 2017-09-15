@@ -13,6 +13,7 @@ class FaceDetector(object):
     
 
     def detect_cascade(self, image):
+        image = cv2.imread(image)
         gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY )
         faces = self.face_cascade.detectMultiScale(gray, 1.3, 5)
 

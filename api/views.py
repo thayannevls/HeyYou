@@ -11,12 +11,12 @@ def index():
     return "Hello World"
 
 
-@app.route('/countFaces', methods=['POST'])
-def count_faces():
-    data = request.get_json()
-    img = data['image']
-    img = base64.decodestring(img)
+# @app.route('/countFaces', methods=['POST'])
+# def count_faces():
+#     data = request.get_json()
+#     img = data['image']
+#     img = base64.decodestring(img)
 
-    detector = fd.FaceDetector()
+#     detector = fd.FaceDetector()
 
-    return detector.face_count(img)
+#     return detector.face_count(img)
