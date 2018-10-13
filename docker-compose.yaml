@@ -1,0 +1,12 @@
+version: '3.5'
+
+services:
+  api:
+    build: .
+    image: openface/api
+    container_name: api
+    volumes: 
+      - .:/openface-api
+    ports:
+      - "8000:8000"
+      - "9000:9000"
